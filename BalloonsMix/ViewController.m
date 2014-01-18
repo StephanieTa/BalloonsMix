@@ -30,16 +30,14 @@
 @property (nonatomic, strong) NSLayoutConstraint *masterBallonPositionYConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *masterBalloonWidthConstraint;
 @property (nonatomic, strong) NSLayoutConstraint *masterBalloonHeightConstraint;
-@property (nonatomic, assign) CGFloat currentMasterBalloonHeight;
 
 @end
+
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.currentMasterBalloonHeight = 10.0f;
     
     // Set up cloud view
     
@@ -159,44 +157,35 @@
 
 - (void)didTapOnAirPump:(UIView *)airPumpView {
     
-    void (^completionBlock)(IdeaView *) = ^(IdeaView *ideaView) {
-//        [self updateConstraintsMasterBalloonViewsIdeaView:ideaView];
-    };
-    
     void (^completionBlockA)(BOOL) = ^(BOOL finished) {
-//        [UIView animateWithDuration:1.0f animations:^{
-//            [self.masterBalloonView.ideaViewOne addIdeaWithImage:[UIImage imageNamed:@"blueDot.png"]
-//                                                      completion:completionBlock
-//             ];
-//        }];
+        CGPoint position = [self.masterBalloonView.ideaViewOne calculateNewIdeaPosition];
+        [self.masterBalloonView.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"blueDot.png"]];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            [self updateConstraintsMasterBalloonViewsIdeaView:self.masterBalloonView.ideaViewOne];
+        }];
     };
     
     void (^completionBlockB)(BOOL) = ^(BOOL finished) {
-//        [UIView animateWithDuration:1.0f animations:^{
-//            [self.masterBalloonView.ideaViewTwo addIdeaWithImage:[UIImage imageNamed:@"redDot.png"]
-//                                                      completion:completionBlock];
-//        }];
+        CGPoint position = [self.masterBalloonView.ideaViewTwo calculateNewIdeaPosition];
+        [self.masterBalloonView.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            [self updateConstraintsMasterBalloonViewsIdeaView:self.masterBalloonView.ideaViewTwo];
+        }];
     };
     
     void (^completionBlockC)(BOOL) = ^(BOOL finished) {
-//        [UIView animateWithDuration:1.0f animations:^{
-//            [self.masterBalloonView.ideaViewThree addIdeaWithImage:[UIImage imageNamed:@"greenDot.png"]
-//                                                        completion:completionBlock];
-//        }];
+        CGPoint position = [self.masterBalloonView.ideaViewThree calculateNewIdeaPosition];
+        [self.masterBalloonView.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            [self updateConstraintsMasterBalloonViewsIdeaView:self.masterBalloonView.ideaViewThree];
+        }];
     };
-    
-//    void (^completionBlock)(BOOL) = ^(BOOL finished) {
-//        CGPoint position = [self.masterBalloonView.ideaViewOne calculateNewIdeaPosition];
-//        [self.ideaView drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
-//        
-//        [CATransaction begin];
-//        [CATransaction setCompletionBlock:^{
-//            if (self.ideaView.balloonHeightConstraint.constant > self.currentBalloonHeight) {
-//                self.currentBalloonHeight = self.ideaView.balloonHeightConstraint.constant;
-//                self.ideaViewPositionYConstraint.constant -= 10.0f;
-//            }
-//        }];
-//    };
     
     if ([airPumpView isEqual:self.airPumpOne]) {
         [self.airTubeLeft animateIdeaAlongAirTubeAtPosition:@"Left" completion:completionBlockA];
