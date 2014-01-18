@@ -37,6 +37,7 @@
 		218E54F4188B3E8D00D12351 /* AirPumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54F3188B3E8D00D12351 /* AirPumpView.m */; };
 		218E54F7188B3F4100D12351 /* AirTubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54F6188B3F4100D12351 /* AirTubeView.m */; };
 		218E54FB188B3FF100D12351 /* UIBezierPath+AirTubeGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54FA188B3FF100D12351 /* UIBezierPath+AirTubeGlyph.m */; };
+		218E54FE188B415C00D12351 /* IdeaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54FD188B415C00D12351 /* IdeaView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,8 @@
 		218E54F6188B3F4100D12351 /* AirTubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirTubeView.m; sourceTree = "<group>"; };
 		218E54F9188B3FF100D12351 /* UIBezierPath+AirTubeGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AirTubeGlyph.h"; sourceTree = "<group>"; };
 		218E54FA188B3FF100D12351 /* UIBezierPath+AirTubeGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AirTubeGlyph.m"; sourceTree = "<group>"; };
+		218E54FC188B415C00D12351 /* IdeaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaView.h; sourceTree = "<group>"; };
+		218E54FD188B415C00D12351 /* IdeaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				218E54ED188B3D7700D12351 /* CloudView.m */,
 				218E54EF188B3DDA00D12351 /* BalloonView.h */,
 				218E54F0188B3DDA00D12351 /* BalloonView.m */,
+				218E54FC188B415C00D12351 /* IdeaView.h */,
+				218E54FD188B415C00D12351 /* IdeaView.m */,
 				218E54F5188B3F4100D12351 /* AirTubeView.h */,
 				218E54F6188B3F4100D12351 /* AirTubeView.m */,
 				218E54F2188B3E8D00D12351 /* AirPumpView.h */,
@@ -338,6 +343,7 @@
 				218E54F4188B3E8D00D12351 /* AirPumpView.m in Sources */,
 				218E54F1188B3DDA00D12351 /* BalloonView.m in Sources */,
 				218E54B7188B3BD400D12351 /* ViewController.m in Sources */,
+				218E54FE188B415C00D12351 /* IdeaView.m in Sources */,
 				218E54B1188B3BD400D12351 /* AppDelegate.m in Sources */,
 				218E54FB188B3FF100D12351 /* UIBezierPath+AirTubeGlyph.m in Sources */,
 				218E54F7188B3F4100D12351 /* AirTubeView.m in Sources */,
