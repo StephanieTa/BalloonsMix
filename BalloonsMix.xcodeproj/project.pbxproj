@@ -32,6 +32,7 @@
 		218E54E9188B3D0B00D12351 /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218E54DE188B3D0B00D12351 /* greenDot.png */; };
 		218E54EA188B3D0B00D12351 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218E54DF188B3D0B00D12351 /* redDot.png */; };
 		218E54EB188B3D0B00D12351 /* yellowDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218E54E0188B3D0B00D12351 /* yellowDot.png */; };
+		218E54EE188B3D7700D12351 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54ED188B3D7700D12351 /* CloudView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		218E54DE188B3D0B00D12351 /* greenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenDot.png; sourceTree = "<group>"; };
 		218E54DF188B3D0B00D12351 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
 		218E54E0188B3D0B00D12351 /* yellowDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowDot.png; sourceTree = "<group>"; };
+		218E54EC188B3D7700D12351 /* CloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudView.h; sourceTree = "<group>"; };
+		218E54ED188B3D7700D12351 /* CloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,8 @@
 				218E54B8188B3BD400D12351 /* Images.xcassets */,
 				218E54AF188B3BD400D12351 /* AppDelegate.h */,
 				218E54B0188B3BD400D12351 /* AppDelegate.m */,
+				218E54EC188B3D7700D12351 /* CloudView.h */,
+				218E54ED188B3D7700D12351 /* CloudView.m */,
 				218E54B5188B3BD400D12351 /* ViewController.h */,
 				218E54B6188B3BD400D12351 /* ViewController.m */,
 				218E54D5188B3CE300D12351 /* Images */,
@@ -301,6 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				218E54EE188B3D7700D12351 /* CloudView.m in Sources */,
 				218E54B7188B3BD400D12351 /* ViewController.m in Sources */,
 				218E54B1188B3BD400D12351 /* AppDelegate.m in Sources */,
 				218E54AD188B3BD400D12351 /* main.m in Sources */,
