@@ -33,6 +33,7 @@
 		218E54EA188B3D0B00D12351 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218E54DF188B3D0B00D12351 /* redDot.png */; };
 		218E54EB188B3D0B00D12351 /* yellowDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218E54E0188B3D0B00D12351 /* yellowDot.png */; };
 		218E54EE188B3D7700D12351 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54ED188B3D7700D12351 /* CloudView.m */; };
+		218E54F1188B3DDA00D12351 /* BalloonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 218E54F0188B3DDA00D12351 /* BalloonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		218E54E0188B3D0B00D12351 /* yellowDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowDot.png; sourceTree = "<group>"; };
 		218E54EC188B3D7700D12351 /* CloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudView.h; sourceTree = "<group>"; };
 		218E54ED188B3D7700D12351 /* CloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudView.m; sourceTree = "<group>"; };
+		218E54EF188B3DDA00D12351 /* BalloonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalloonView.h; sourceTree = "<group>"; };
+		218E54F0188B3DDA00D12351 /* BalloonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalloonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				218E54B0188B3BD400D12351 /* AppDelegate.m */,
 				218E54EC188B3D7700D12351 /* CloudView.h */,
 				218E54ED188B3D7700D12351 /* CloudView.m */,
+				218E54EF188B3DDA00D12351 /* BalloonView.h */,
+				218E54F0188B3DDA00D12351 /* BalloonView.m */,
 				218E54B5188B3BD400D12351 /* ViewController.h */,
 				218E54B6188B3BD400D12351 /* ViewController.m */,
 				218E54D5188B3CE300D12351 /* Images */,
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				218E54EE188B3D7700D12351 /* CloudView.m in Sources */,
+				218E54F1188B3DDA00D12351 /* BalloonView.m in Sources */,
 				218E54B7188B3BD400D12351 /* ViewController.m in Sources */,
 				218E54B1188B3BD400D12351 /* AppDelegate.m in Sources */,
 				218E54AD188B3BD400D12351 /* main.m in Sources */,
