@@ -67,22 +67,22 @@
     
     self.masterBalloonView = [[BalloonView alloc] init];
     self.masterBalloonView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.masterBalloonView setBalloonWithImage:[UIImage imageNamed:@"yellowBalloon.png"]];
+    [self.masterBalloonView setUpBalloonWithImage:[UIImage imageNamed:@"yellowBalloon.png"]];
     [self.cloudView addSubview:self.masterBalloonView];
     
     self.ideaViewOne = [[IdeaView alloc] init];
     self.ideaViewOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewOne.balloonView setBalloonWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
+    [self.ideaViewOne.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewOne];
     
     self.ideaViewTwo = [[IdeaView alloc] init];
     self.ideaViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewTwo.balloonView setBalloonWithImage:[UIImage imageNamed:@"greenBalloon.png"]];
+    [self.ideaViewTwo.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"greenBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewTwo];
     
     self.ideaViewThree = [[IdeaView alloc] init];
     self.ideaViewThree.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewThree.balloonView setBalloonWithImage:[UIImage imageNamed:@"blueBalloon.png"]];
+    [self.ideaViewThree.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"blueBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewThree];
     
     // Set up air tubes
@@ -106,16 +106,19 @@
     
     self.airPumpOne = [[AirPumpView alloc] init];
     self.airPumpOne.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.airPumpOne setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomRed.png"]];
     self.airPumpOne.delegate = self;
     [self.view addSubview:self.airPumpOne];
     
     self.airPumpTwo = [[AirPumpView alloc] init];
     self.airPumpTwo.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.airPumpTwo setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomGreen.png"]];
     self.airPumpTwo.delegate = self;
     [self.view addSubview:self.airPumpTwo];
     
     self.airPumpThree = [[AirPumpView alloc] init];
     self.airPumpThree.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.airPumpThree setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomBlue.png"]];
     self.airPumpThree.delegate = self;
     [self.view addSubview:self.airPumpThree];
     
