@@ -200,7 +200,7 @@
     
     void (^completionBlockB)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewTwo calculateNewIdeaPosition];
-        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"yellowDot.png"]];
+        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewTwo];
     };
     
