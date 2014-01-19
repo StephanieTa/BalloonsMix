@@ -72,17 +72,17 @@
     
     self.ideaViewOne = [[IdeaView alloc] init];
     self.ideaViewOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewOne.balloonView setBalloonWithImage:[UIImage imageNamed:@"blueBalloon.png"]];
+    [self.ideaViewOne.balloonView setBalloonWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewOne];
     
     self.ideaViewTwo = [[IdeaView alloc] init];
     self.ideaViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewTwo.balloonView setBalloonWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
+    [self.ideaViewTwo.balloonView setBalloonWithImage:[UIImage imageNamed:@"greenBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewTwo];
     
     self.ideaViewThree = [[IdeaView alloc] init];
     self.ideaViewThree.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewThree.balloonView setBalloonWithImage:[UIImage imageNamed:@"greenBalloon.png"]];
+    [self.ideaViewThree.balloonView setBalloonWithImage:[UIImage imageNamed:@"blueBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewThree];
     
     // Set up air tubes
@@ -194,19 +194,19 @@
     
     void (^completionBlockA)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewOne calculateNewIdeaPosition];
-        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"blueDot.png"]];
+        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewOne];
     };
     
     void (^completionBlockB)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewTwo calculateNewIdeaPosition];
-        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
+        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewTwo];
     };
     
     void (^completionBlockC)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewThree calculateNewIdeaPosition];
-        [self.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
+        [self.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"blueDot.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewThree];
     };
     
