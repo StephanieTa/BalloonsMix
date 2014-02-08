@@ -50,6 +50,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setNeedsUpdateConstraints];
+    
     // Set up cloud view
     
     self.cloudView = [[CloudView alloc] init];
@@ -260,6 +262,10 @@
     
     self.ideaViewThreePositionCenterX.constant = self.masterBalloonWidthConstraint.constant/6.0f;
     self.ideaViewThreePositionCenterY.constant = -self.masterBalloonHeightConstraint.constant/6.0f;
+    
+    [UIView animateWithDuration:0.5f animations:^{
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end
