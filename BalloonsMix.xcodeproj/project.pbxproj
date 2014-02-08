@@ -14,6 +14,9 @@
 		2119E6E7188C8DA30022C6B9 /* airPumpBottomBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E4188C8DA30022C6B9 /* airPumpBottomBlue.png */; };
 		2119E6E8188C8DA30022C6B9 /* airPumpBottomGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E5188C8DA30022C6B9 /* airPumpBottomGreen.png */; };
 		2119E6E9188C8DA30022C6B9 /* airPumpBottomRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E6188C8DA30022C6B9 /* airPumpBottomRed.png */; };
+		218D7E9318A6F3DC00636331 /* airPumpBottomPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 218D7E9218A6F3DC00636331 /* airPumpBottomPurple.png */; };
+		218D7E9518A6F84500636331 /* purpleBalloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 218D7E9418A6F84500636331 /* purpleBalloon.png */; };
+		218D7E9718A6F8CB00636331 /* purpleDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 218D7E9618A6F8CB00636331 /* purpleDot.png */; };
 		218E54A1188B3BD400D12351 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218E54A0188B3BD400D12351 /* Foundation.framework */; };
 		218E54A3188B3BD400D12351 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218E54A2188B3BD400D12351 /* CoreGraphics.framework */; };
 		218E54A5188B3BD400D12351 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218E54A4188B3BD400D12351 /* UIKit.framework */; };
@@ -63,6 +66,9 @@
 		2119E6E4188C8DA30022C6B9 /* airPumpBottomBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomBlue.png; sourceTree = "<group>"; };
 		2119E6E5188C8DA30022C6B9 /* airPumpBottomGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomGreen.png; sourceTree = "<group>"; };
 		2119E6E6188C8DA30022C6B9 /* airPumpBottomRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomRed.png; sourceTree = "<group>"; };
+		218D7E9218A6F3DC00636331 /* airPumpBottomPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomPurple.png; sourceTree = "<group>"; };
+		218D7E9418A6F84500636331 /* purpleBalloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleBalloon.png; sourceTree = "<group>"; };
+		218D7E9618A6F8CB00636331 /* purpleDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purpleDot.png; sourceTree = "<group>"; };
 		218E549D188B3BD300D12351 /* BalloonsMix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BalloonsMix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218E54A0188B3BD400D12351 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		218E54A2188B3BD400D12351 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -220,6 +226,7 @@
 				2119E6E4188C8DA30022C6B9 /* airPumpBottomBlue.png */,
 				2119E6E5188C8DA30022C6B9 /* airPumpBottomGreen.png */,
 				2119E6E6188C8DA30022C6B9 /* airPumpBottomRed.png */,
+				218D7E9218A6F3DC00636331 /* airPumpBottomPurple.png */,
 				218E54D7188B3D0B00D12351 /* airPumpTop.png */,
 				218E54DA188B3D0B00D12351 /* cloudBG.jpg */,
 				218E54DB188B3D0B00D12351 /* cloudBig.png */,
@@ -233,6 +240,8 @@
 				218E54E0188B3D0B00D12351 /* yellowDot.png */,
 				2119E6C6188C811B0022C6B9 /* orangeBalloon.png */,
 				218E54DF188B3D0B00D12351 /* redDot.png */,
+				218D7E9418A6F84500636331 /* purpleBalloon.png */,
+				218D7E9618A6F8CB00636331 /* purpleDot.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -323,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2119E6E8188C8DA30022C6B9 /* airPumpBottomGreen.png in Resources */,
+				218D7E9718A6F8CB00636331 /* purpleDot.png in Resources */,
 				218E54E2188B3D0B00D12351 /* airPumpTop.png in Resources */,
 				218E54B9188B3BD400D12351 /* Images.xcassets in Resources */,
 				218E54E6188B3D0B00D12351 /* cloudBig.png in Resources */,
@@ -336,8 +346,10 @@
 				218E54B4188B3BD400D12351 /* Main.storyboard in Resources */,
 				218E54E7188B3D0B00D12351 /* cloudSmall.png in Resources */,
 				2119E6C9188C811B0022C6B9 /* greenBalloon.png in Resources */,
+				218D7E9318A6F3DC00636331 /* airPumpBottomPurple.png in Resources */,
 				218E54EB188B3D0B00D12351 /* yellowDot.png in Resources */,
 				218E54E4188B3D0B00D12351 /* blueDot.png in Resources */,
+				218D7E9518A6F84500636331 /* purpleBalloon.png in Resources */,
 				2119E6E9188C8DA30022C6B9 /* airPumpBottomRed.png in Resources */,
 				2119E6CA188C811B0022C6B9 /* orangeBalloon.png in Resources */,
 				2119E6C8188C811B0022C6B9 /* blueBalloon.png in Resources */,

@@ -74,7 +74,7 @@
     
     self.ideaViewOne = [[IdeaView alloc] init];
     self.ideaViewOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewOne.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
+    [self.ideaViewOne.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"purpleBalloon.png"]];
     [self.masterBalloonView addSubview:self.ideaViewOne];
     
     self.ideaViewTwo = [[IdeaView alloc] init];
@@ -108,7 +108,7 @@
     
     self.airPumpOne = [[AirPumpView alloc] init];
     self.airPumpOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.airPumpOne setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomRed.png"]];
+    [self.airPumpOne setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomPurple.png"]];
     self.airPumpOne.delegate = self;
     [self.view addSubview:self.airPumpOne];
     
@@ -199,7 +199,7 @@
     
     void (^completionBlockA)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewOne calculateNewIdeaPosition];
-        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
+        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"purpleDot.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewOne];
     };
     
