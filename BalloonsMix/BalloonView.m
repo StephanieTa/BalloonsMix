@@ -10,7 +10,7 @@
 
 @interface BalloonView ()
 
-@property (nonatomic, strong) UIImageView *balloonImageView;
+@property (nonatomic, strong) UIImageView *gasImageView;
 - (void)initBallon;
 
 @end
@@ -18,12 +18,12 @@
 @implementation BalloonView
 
 - (void)initBallon {
-    self.balloonImageView = [[UIImageView alloc] init];
-    self.balloonImageView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self addSubview:self.balloonImageView];
+    self.gasImageView = [[UIImageView alloc] init];
+    self.gasImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.gasImageView];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_balloonImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_balloonImageView)]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_balloonImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_balloonImageView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_gasImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_gasImageView)]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_gasImageView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_gasImageView)]];
 }
 
 - (id)initWithFrame:(CGRect)frame {
@@ -36,8 +36,8 @@
     return self;
 }
 
-- (void)setUpBalloonWithImage:(UIImage *)balloonImage {
-    [self.balloonImageView setImage:balloonImage];
+- (void)setUpGasBackgroundWithImage:(UIImage *)gasImage {
+    [self.gasImageView setImage:gasImage];
 }
 
 @end

@@ -69,22 +69,22 @@
     
     self.masterBalloonView = [[BalloonView alloc] init];
     self.masterBalloonView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.masterBalloonView setUpBalloonWithImage:[UIImage imageNamed:@"balloonYellow.png"]];
+    [self.masterBalloonView setUpGasBackgroundWithImage:[UIImage imageNamed:@"balloonYellow.png"]];
     [self.cloudView addSubview:self.masterBalloonView];
     
     self.ideaViewOne = [[IdeaView alloc] init];
     self.ideaViewOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewOne.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"purpleBalloon.png"]];
+    [self.ideaViewOne.balloonView setUpGasBackgroundWithImage:[UIImage imageNamed:@"gasPurple.png"]];
     [self.masterBalloonView addSubview:self.ideaViewOne];
     
     self.ideaViewTwo = [[IdeaView alloc] init];
     self.ideaViewTwo.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewTwo.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"greenBalloon.png"]];
+    [self.ideaViewTwo.balloonView setUpGasBackgroundWithImage:[UIImage imageNamed:@"gasGreen.png"]];
     [self.masterBalloonView addSubview:self.ideaViewTwo];
     
     self.ideaViewThree = [[IdeaView alloc] init];
     self.ideaViewThree.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.ideaViewThree.balloonView setUpBalloonWithImage:[UIImage imageNamed:@"blueBalloon.png"]];
+    [self.ideaViewThree.balloonView setUpGasBackgroundWithImage:[UIImage imageNamed:@"gasDarkBlue.png"]];
     [self.masterBalloonView addSubview:self.ideaViewThree];
     
     // Set up air tubes

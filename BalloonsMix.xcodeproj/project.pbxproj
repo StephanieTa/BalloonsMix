@@ -13,6 +13,9 @@
 		214D43A718A7CD9D0038D86F /* dotBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43A318A7CD9D0038D86F /* dotBlue.png */; };
 		214D43A818A7CD9D0038D86F /* dotGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43A418A7CD9D0038D86F /* dotGreen.png */; };
 		214D43A918A7CD9D0038D86F /* dotPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43A518A7CD9D0038D86F /* dotPurple.png */; };
+		214D43B118A7D9950038D86F /* gasPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43B018A7D9950038D86F /* gasPurple.png */; };
+		214D43B518A7DAFC0038D86F /* gasGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43B318A7DAFC0038D86F /* gasGreen.png */; };
+		214D43B718A7E07E0038D86F /* gasDarkBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43B618A7E07E0038D86F /* gasDarkBlue.png */; };
 		21667A5918A7C70B0036D0E9 /* airPumpBottomBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 21667A5618A7C70B0036D0E9 /* airPumpBottomBlue.png */; };
 		21667A5A18A7C70B0036D0E9 /* airPumpBottomGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 21667A5718A7C70B0036D0E9 /* airPumpBottomGreen.png */; };
 		21667A5B18A7C70B0036D0E9 /* airPumpBottomPurple.png in Resources */ = {isa = PBXBuildFile; fileRef = 21667A5818A7C70B0036D0E9 /* airPumpBottomPurple.png */; };
@@ -58,6 +61,9 @@
 		214D43A318A7CD9D0038D86F /* dotBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotBlue.png; sourceTree = "<group>"; };
 		214D43A418A7CD9D0038D86F /* dotGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotGreen.png; sourceTree = "<group>"; };
 		214D43A518A7CD9D0038D86F /* dotPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotPurple.png; sourceTree = "<group>"; };
+		214D43B018A7D9950038D86F /* gasPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gasPurple.png; sourceTree = "<group>"; };
+		214D43B318A7DAFC0038D86F /* gasGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gasGreen.png; sourceTree = "<group>"; };
+		214D43B618A7E07E0038D86F /* gasDarkBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gasDarkBlue.png; sourceTree = "<group>"; };
 		21667A5618A7C70B0036D0E9 /* airPumpBottomBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomBlue.png; sourceTree = "<group>"; };
 		21667A5718A7C70B0036D0E9 /* airPumpBottomGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomGreen.png; sourceTree = "<group>"; };
 		21667A5818A7C70B0036D0E9 /* airPumpBottomPurple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomPurple.png; sourceTree = "<group>"; };
@@ -213,14 +219,17 @@
 				218E54DB188B3D0B00D12351 /* cloudBig.png */,
 				218E54DC188B3D0B00D12351 /* cloudSmall.png */,
 				214D43A018A7CD1E0038D86F /* grassland.png */,
+				218E54D7188B3D0B00D12351 /* airPumpTop.png */,
 				21667A5618A7C70B0036D0E9 /* airPumpBottomBlue.png */,
 				21667A5718A7C70B0036D0E9 /* airPumpBottomGreen.png */,
 				21667A5818A7C70B0036D0E9 /* airPumpBottomPurple.png */,
-				218E54D7188B3D0B00D12351 /* airPumpTop.png */,
 				214D43A218A7CD9D0038D86F /* balloonYellow.png */,
 				214D43A318A7CD9D0038D86F /* dotBlue.png */,
 				214D43A418A7CD9D0038D86F /* dotGreen.png */,
 				214D43A518A7CD9D0038D86F /* dotPurple.png */,
+				214D43B618A7E07E0038D86F /* gasDarkBlue.png */,
+				214D43B318A7DAFC0038D86F /* gasGreen.png */,
+				214D43B018A7D9950038D86F /* gasPurple.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -314,8 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				214D439F18A7C9AC0038D86F /* blueSky.png in Resources */,
+				214D43B518A7DAFC0038D86F /* gasGreen.png in Resources */,
 				218E54E2188B3D0B00D12351 /* airPumpTop.png in Resources */,
+				214D43B718A7E07E0038D86F /* gasDarkBlue.png in Resources */,
 				214D43A718A7CD9D0038D86F /* dotBlue.png in Resources */,
+				214D43B118A7D9950038D86F /* gasPurple.png in Resources */,
 				218E54B9188B3BD400D12351 /* Images.xcassets in Resources */,
 				218E54E6188B3D0B00D12351 /* cloudBig.png in Resources */,
 				214D43A118A7CD1E0038D86F /* grassland.png in Resources */,
