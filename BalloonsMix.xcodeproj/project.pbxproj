@@ -302,6 +302,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Stephanie Ta";
 				TargetAttributes = {
+					218E549C188B3BD300D12351 = {
+						DevelopmentTeam = NV7B69S7F8;
+					};
 					218E54BD188B3BD400D12351 = {
 						TestTargetID = 218E549C188B3BD300D12351;
 					};
@@ -506,10 +509,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonsMix/BalloonsMix-Prefix.pch";
 				INFOPLIST_FILE = "BalloonsMix/BalloonsMix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29529A48-BBBC-47E5-9886-B0CD51F195B9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -519,10 +524,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonsMix/BalloonsMix-Prefix.pch";
 				INFOPLIST_FILE = "BalloonsMix/BalloonsMix-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "29529A48-BBBC-47E5-9886-B0CD51F195B9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
