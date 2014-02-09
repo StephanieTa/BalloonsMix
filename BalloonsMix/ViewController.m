@@ -61,15 +61,15 @@
     
     // Set up ground view
     
-    UIImageView *groundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"greenBG.png"]];
-    groundView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:groundView];
+    UIImageView *grasslandView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grassland.png"]];
+    grasslandView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:grasslandView];
     
     // Set up masterBalloon view
     
     self.masterBalloonView = [[BalloonView alloc] init];
     self.masterBalloonView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.masterBalloonView setUpBalloonWithImage:[UIImage imageNamed:@"yellowBalloon.png"]];
+    [self.masterBalloonView setUpBalloonWithImage:[UIImage imageNamed:@"balloonYellow.png"]];
     [self.cloudView addSubview:self.masterBalloonView];
     
     self.ideaViewOne = [[IdeaView alloc] init];
@@ -126,14 +126,14 @@
     
     // Layout views
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(_cloudView, groundView, _masterBalloonView, _airPumpOne, _airPumpTwo, _airPumpThree, _airTubeLeft, _airTubeCenter, _airTubeRight, _ideaViewOne, _ideaViewTwo, _ideaViewThree);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_cloudView, grasslandView, _masterBalloonView, _airPumpOne, _airPumpTwo, _airPumpThree, _airTubeLeft, _airTubeCenter, _airTubeRight, _ideaViewOne, _ideaViewTwo, _ideaViewThree);
     
     // Background views
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cloudView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_cloudView(200.0)]" options:0 metrics:nil views:views]];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[groundView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[groundView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[grasslandView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[grasslandView]|" options:0 metrics:nil views:views]];
     
     // Master balloon view
     [self.cloudView addConstraint: [NSLayoutConstraint constraintWithItem:self.masterBalloonView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.cloudView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0]];
@@ -199,19 +199,19 @@
     
     void (^completionBlockA)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewOne calculateNewIdeaPosition];
-        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"purpleDot.png"]];
+        [self.ideaViewOne drawDotAtPoint:position withImage:[UIImage imageNamed:@"dotPurple.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewOne];
     };
     
     void (^completionBlockB)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewTwo calculateNewIdeaPosition];
-        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
+        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"dotGreen.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewTwo];
     };
     
     void (^completionBlockC)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaViewThree calculateNewIdeaPosition];
-        [self.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"blueDot.png"]];
+        [self.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"dotBlue.png"]];
         [self updateConstraintsMasterBalloonViewsIdeaView:self.ideaViewThree];
     };
     
