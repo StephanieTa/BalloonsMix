@@ -50,7 +50,7 @@
 @property (nonatomic, strong) NSDate *stop;
 
 - (void)updateConstraintsMasterBalloonViewsIdeaView:(IdeaView *)ideaView;
-- (void)logDataFromAirTube:(AirTubeView *)airTube;
+- (void)logDataFromAirPump:(AirPumpView *)airpump;
 
 @end
 
@@ -67,16 +67,22 @@
     self.counter = 1;
     self.start = [NSDate date];
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docsDirectory = [paths objectAtIndex:0];
-    NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLogging.txt"];
-    NSString *message = @"\n***** Start of new user study: Model Mixed *****\n\n";
+    /* Comment this out when you start the app on your device
+     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+     NSString *docsDirectory = [paths objectAtIndex:0];
+     NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLoggingFromDevice_mix.txt"];
+     */
+    
+//    /* Comment this out when you start the app on the simulator, CHANGE "van" in path to your username!!!
+    NSString *path = @"/Users/van/Desktop/dataLoggingFromSimulator_mix.txt";
+//    */
     
 //    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
         [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
     }
     
+    NSString *message = @"\n***** Start of new user study: Model Mixed *****\n\n";
     NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:path];
     [logFile seekToEndOfFile];
     [logFile writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
@@ -121,38 +127,35 @@
     self.airTubeLeft = [[AirTubeView alloc] init];
     self.airTubeLeft.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeLeft drawAirTubeAtPosition:@"Left"];
-    self.airTubeLeft.identification = @"Links";
     [self.view addSubview:self.airTubeLeft];
     
     self.airTubeCenter = [[AirTubeView alloc] init];
     self.airTubeCenter.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeCenter drawAirTubeAtPosition:@"Center"];
-    self.airTubeCenter.identification = @"Mitte";
     [self.view addSubview:self.airTubeCenter];
     
     self.airTubeRight = [[AirTubeView alloc] init];
     self.airTubeRight.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeRight drawAirTubeAtPosition:@"Right"];
-    self.airTubeRight.identification = @"Rechts";
     [self.view addSubview:self.airTubeRight];
     
     // Set up air pumps
     
     self.airPumpOne = [[AirPumpView alloc] init];
     self.airPumpOne.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.airPumpOne setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomPurple.png"]];
+    [self.airPumpOne setUpAirPumpWithID:@"Links" andImage:[UIImage imageNamed:@"airPumpBottomPurple.png"]];
     self.airPumpOne.delegate = self;
     [self.view addSubview:self.airPumpOne];
     
     self.airPumpTwo = [[AirPumpView alloc] init];
     self.airPumpTwo.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.airPumpTwo setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomGreen.png"]];
+    [self.airPumpTwo setUpAirPumpWithID:@"Mitte" andImage:[UIImage imageNamed:@"airPumpBottomGreen.png"]];
     self.airPumpTwo.delegate = self;
     [self.view addSubview:self.airPumpTwo];
     
     self.airPumpThree = [[AirPumpView alloc] init];
     self.airPumpThree.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.airPumpThree setUpAirPumpWithImage:[UIImage imageNamed:@"airPumpBottomBlue.png"]];
+    [self.airPumpThree setUpAirPumpWithID:@"Rechts" andImage:[UIImage imageNamed:@"airPumpBottomBlue.png"]];
     self.airPumpThree.delegate = self;
     [self.view addSubview:self.airPumpThree];
     
@@ -255,15 +258,15 @@
     
     if ([airPumpView isEqual:self.airPumpOne]) {
         [self.airTubeLeft animateIdeaAlongAirTubeAtPosition:@"Left" completion:completionBlockA];
-        [self logDataFromAirTube:self.airTubeLeft];
+        [self logDataFromAirPump:self.airPumpOne];
     }
     else if ([airPumpView isEqual:self.airPumpTwo]) {
         [self.airTubeCenter animateIdeaAlongAirTubeAtPosition:@"Center" completion:completionBlockB];
-        [self logDataFromAirTube:self.airTubeCenter];
+        [self logDataFromAirPump:self.airPumpTwo];
     }
     else if ([airPumpView isEqual:self.airPumpThree]) {
         [self.airTubeRight animateIdeaAlongAirTubeAtPosition:@"Right" completion:completionBlockC];
-        [self logDataFromAirTube:self.airTubeRight];
+        [self logDataFromAirPump:self.airPumpThree];
     }
 }
 
@@ -307,7 +310,7 @@
     }];
 }
 
-- (void)logDataFromAirTube:(AirTubeView *)airTube {
+- (void)logDataFromAirPump:(AirPumpView *)airpump {
     
     // Berechnung der Uhrzeit
     
@@ -328,15 +331,21 @@
     
     // Logging
     
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *docsDirectory = [paths objectAtIndex:0];
-    NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLogging.txt"];
-    NSString *message = [NSString stringWithFormat:@"%d. Uhrzeit: %d:%d:%d, Zeitdauer: %@, Luftpumpe: %@\n", (int)self.counter, (int)hour, (int)minute, (int)second, timeIntervallString, airTube.identification];
+    /* Comment this out when you start the app on your device
+     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+     NSString *docsDirectory = [paths objectAtIndex:0];
+     NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLoggingFromDevice_mix.txt"];
+     */
+    
+//    /* Comment this out when you start the app on the simulator, CHANGE "van" in path to your username!!!
+    NSString *path = @"/Users/van/Desktop/dataLoggingFromSimulator_mix.txt";
+//    */
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
         [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
     }
     
+    NSString *message = [NSString stringWithFormat:@"%d. Uhrzeit: %d:%d:%d, Zeitdauer: %@, Luftpumpe: %@\n", (int)self.counter, (int)hour, (int)minute, (int)second, timeIntervallString, airpump.identification];
     NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:path];
     [logFile seekToEndOfFile];
     [logFile writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];

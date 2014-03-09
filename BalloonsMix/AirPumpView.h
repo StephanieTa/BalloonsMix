@@ -12,9 +12,10 @@
 
 @interface AirPumpView : UIView
 
+@property (nonatomic) NSString *identification;
 @property (nonatomic, weak) id <AirPumpViewDelegate> delegate;
 
-- (void)setUpAirPumpWithImage:(UIImage *)airPumpImage;
+- (void)setUpAirPumpWithID:(NSString *)identification andImage:(UIImage *)airPumpImage;
 
 @end
 

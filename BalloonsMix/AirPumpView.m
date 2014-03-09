@@ -60,7 +60,8 @@
 
 #pragma mark - Public methods
 
-- (void)setUpAirPumpWithImage:(UIImage *)airPumpImage {
+- (void)setUpAirPumpWithID:(NSString *)identification andImage:(UIImage *)airPumpImage {
+    self.identification = identification;
     [self.bottomView setImage:airPumpImage];
 }
 
