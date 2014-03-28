@@ -73,11 +73,14 @@
      NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLoggingFromDevice_mix.txt"];
      */
     
-//    /* Comment this out when you start the app on the simulator, CHANGE "van" in path to your username!!!
-    NSString *path = @"/Users/van/Desktop/dataLoggingFromSimulator_mix.txt";
+//    /* Comment this out when you start the app on the simulator, CHANGE "yourUsername" in path to your username!!!
+    NSString *path = @"/Users/yourUsername/Desktop/dataLoggingFromSimulator_mix.txt";
 //    */
     
-//    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    /* use following code of line to remove the file */
+    //    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    
+    /* use the three following lines to create a file if not already existing */
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
         [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
     }
