@@ -340,8 +340,8 @@
      NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLoggingFromDevice_mix.txt"];
      */
     
-//    /* Comment this out when you start the app on the simulator, CHANGE "van" in path to your username!!!
-    NSString *path = @"/Users/van/Desktop/dataLoggingFromSimulator_mix.txt";
+//    /* Comment this out when you start the app on the simulator, CHANGE "yourUsername" in path to your username!!!
+    NSString *path = @"/Users/yourUsername/Desktop/dataLoggingFromSimulator_mix.txt";
 //    */
     
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
